@@ -93,10 +93,55 @@ li .deleteBtn:hover{
 
 .footer{
   position: fixed;
+  text-align: center;
   left: 0;
   bottom: 0;
   width: 100%;
   background-color: rgb(112, 112, 112);
   color: white;
   font-size: 12pt;
+}
+
+.about{
+  color: black;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 800px;
+}
+
+.about .contact-type{
+  padding: 0;
+  width: 400px;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about .contact-type li{
+  width: 400px;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 58pt;
+}
+
+.about .contact-type .github{
+  color: black;
+}
+
+.about .contact-type .github:hover{
+  opacity: .7;
+}
+
+.about .contact-type .linkedin{
+  color: rgb(58, 69, 228);
+}
+
+.about .contact-type .linkedin:hover{
+  opacity: .7;
 }

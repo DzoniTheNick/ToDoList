@@ -3,6 +3,8 @@ import React, {useState} from 'react';
 import Footer from "./components/Footer";
 import NavBar from './components/NavBar';
 import Form from './components/Form';
+import About from './components/About';
+import {BrowserRouter, Routes, Route} from "react-router-dom";
 
 function App() {
 
@@ -11,11 +13,20 @@ function App() {
   const [tasks, setTasks] = useState([]);
 
   return (
-    <div className="App">
+    <BrowserRouter className="App">
       <NavBar></NavBar>
-      <Form task={task} tasks={tasks} setTask={setTask} setTasks={setTasks}></Form>
+      <Routes>
+        <Route path='/' element={
+          <Form task={task} tasks={tasks} setTask={setTask} setTasks={setTasks}></Form>
+        }>
+        </Route>
+        <Route path="/about" element={
+          <About></About>
+        }>
+        </Route>
+      </Routes>
       <Footer></Footer>
-    </div>
+    </BrowserRouter>
   );
 }
 
