@@ -1,38 +1,102 @@
-.App {
+.App{
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.navBar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  font-size: 16pt;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.navBar ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  width: 100%;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.navBar ul .elements{
+  width: 40%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.navBar li{
+  float: left;
+}
+
+.navBar li a{
+  width: 200px;
+  display: block;
   color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
 }
 
-.App-link {
-  color: #61dafb;
+.navBar li a:hover{
+  background-color: #111;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.form{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 800px;
+}
+
+.form input{
+  font-size: 20pt;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.form .addTask{
+  font-size: 20pt;
+  margin-left: 20px;
+  border-radius: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.itemList ul{
+  margin-top: 40px;
+}
+
+.itemList li{
+  list-style: none;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-size: 17pt;
+}
+
+li .deleteBtn{
+  margin-left: 15px;
+}
+
+li .deleteBtn:hover{
+  opacity: 0.8;
+  color: red;
+}
+
+.footer{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgb(112, 112, 112);
+  color: white;
+  font-size: 12pt;
 }
